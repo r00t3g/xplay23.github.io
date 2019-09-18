@@ -1,0 +1,776 @@
+global-reset()
+
+@import "fonts.styl"
+
+
+input
+select
+textarea
+	font-family inherit
+	font-size inherit
+	color inherit
+a
+	font-family inherit
+	text-decoration none
+	color inherit
+*
+	-webkit-tap-highlight-color: transparent;
+
+
+		
+img
+	max-width 100%
+	height auto
+	
+input, select, textarea 
+	font-size: 16px;
+
+body
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+	color #333333
+	font-size 16px
+	line-height 1.5
+	background #fff
+	font-family: 'Lato';
+*:focus
+	outline none
+strong
+	font-weight: 800;
+.sile_color
+	color #0c9b93
+.wrap_all
+	width 100%
+	position relative
+	overflow hidden
+.content
+	max-width 1280px
+	margin auto
+	padding 0 20px
+.content_big
+	max-width 1660px
+	margin auto
+	padding 0 20px
+	position relative
+.big_head
+	font-size 48px
+	font-weight 800
+	color #404543
+	text-transform uppercase
+	margin-bottom 70px
+	&.white
+		color #fff
+.boxes
+	display flex
+	align-items flex-start
+	flex-wrap wrap
+.wawe_bg_wrap
+	background url(../img/white_bg_lines.svg) bottom/100% 190px no-repeat, url(../img/white_bg_lines_top.svg) top/100% 190px no-repeat
+.wawe_top_bg_wrap
+	background url(../img/white_bg_lines_top.svg) top/100% 190px no-repeat
+.bg_top_wave
+	background url(../img/line_bg_one.svg) top/100% 90px no-repeat
+.main_form
+	position relative
+	max-width 640px
+	margin auto
+	font-size 18px
+	.input_wrp
+		width 100%
+		input
+			box-sizing border-box
+			text-align left
+			width calc(100% - 110px)
+			display block
+			padding 27px 220px 28px 60px
+			border-radius 100px
+			border none
+			background #f8f8f8
+			box-shadow: inset 0px 2px 0px 0px rgba(241, 240, 240, 0.8);
+			font-size 1em
+	.input_submit
+		width 220px
+		height 100%
+		right 0
+		top 6px
+		position absolute
+		button
+			font-size 1em
+			cursor pointer
+			border none
+			background #0cb4ab
+			color #fff
+			width 100%
+			height 100%
+			border-radius 100px
+		.submit_decorate
+			position absolute
+			top 50%
+			right 100%
+			margin-right: -30px;
+			max-width: 55%;
+	
+		
+
+.top_section
+	position relative
+	overflow hidden
+	padding-top 65px
+	min-height 850px
+	box-sizing border-box
+	.top_section_bg
+		position absolute
+		top 0
+		right 0
+		min-width 100%
+		min-height 100%
+		left 0
+		height auto
+		max-width none
+	.hand
+		position absolute
+		left 50%
+		max-width 50%
+		bottom: -90px;
+		z-index 1
+		img
+			pointer-events none
+			user-select none
+			display block
+			&:not(:first-child)
+				position absolute
+				bottom 0
+				left 0
+	.content_big
+		position relative
+		z-index 1
+.logo_wrp
+	margin-bottom 128px
+	max-width 191px
+	.logo
+		width 100%
+		display block
+	
+#main_menu_btn
+	display none
+#main_menu
+	position absolute
+	top 64px
+	right 50%
+	margin-right -800px
+	max-width 50%
+	color #fff
+	font-size 18px
+	z-index 3
+	.close_menu
+	.mobile
+		display none
+	.links_block
+		.link
+			position relative
+			text-align center
+			&:hover:after
+				transform scaleX(1)
+			&:after
+				position absolute
+				content ''
+				bottom 0
+				left 0
+				right 0
+				height 1px
+				width 100%
+				background #fff
+				transform scaleX(0)
+				transition transform 300ms
+			&:not(:last-child)
+				margin-right 75px
+	.round_wrp
+		padding-top 128px
+		.link
+			margin-left auto
+			display block
+			max-width 32px
+			margin-bottom 48px
+			transition opacity 300ms
+			&:hover
+				opacity .5
+	.languages
+		padding-top 120px
+		.link
+			font-size 12px
+			font-weight 500
+			text-align center
+			height 32px
+			width 32px
+			line-height 32px
+			background #fff
+			border-radius 50%
+			color #0d766f
+			transition opacity 300ms
+			&:hover
+				opacity .5
+.main_slider
+	max-width 1280px
+	margin auto
+	.slide
+		position relative
+		z-index 1
+		padding 0 0 10px
+	.main_slider_wrap
+		max-width 642px
+		
+	.big_head
+		font-size 42px
+		font-weight 900
+		color #424745
+	hr
+		margin 60px 0
+		display block
+		border none
+		max-width 133px
+		width 50%
+		background #0cb4ab
+		height 1px
+	.cont
+		font-size 25px
+		font-weight 300
+		margin-bottom 115px
+	.slick-dots
+		position absolute
+		left -185px
+		top 8px
+		bottom 8px
+		display flex!important
+		flex-direction column
+		justify-content space-between
+		&:before
+			position absolute
+			width 1px
+			height 100%
+			background #000
+			content ''
+			left 50%
+			top 0
+		li
+			position relative
+			font-size 0
+			width 30px
+			height 30px
+			background #fff
+			display flex
+			align-items center
+			justify-content center
+			cursor pointer
+			&.slick-active
+				button
+					background #0cb4ab
+					border-color #0cb4ab
+			button
+				padding 0
+				margin 0
+				box-shadow 0 0 0 8px #fff
+				border 1px solid #444947
+				border-radius 50%
+				width 8px
+				height 8px
+				font-size 0
+				background #fff
+				transition background 300ms, border-color 300ms
+	
+.about
+	padding 114px 0
+	font-size 21px
+	.boxes
+		margin-bottom 60px
+		.video
+			width 60%
+			position relative
+			margin-right 5%
+			cursor pointer
+			&:hover
+				.play_btn
+					opacity 1
+				
+			video
+				width 100%
+				border-radius 45px
+				box-shadow: 0px 12px 70px 0px rgba(0, 0, 0, 0.25);
+			.play_btn
+				position absolute
+				width 80px
+				top 50%
+				left 50%
+				transform translate(-50%, -50%)
+				opacity .4
+				transition opacity 300ms
+		.text
+			width 35%
+			p
+				margin-bottom 50px
+	ul
+		display flex
+		align-items flex-start
+		flex-wrap wrap
+		margin-top 60px
+		justify-content space-between
+		
+		li
+			margin-bottom 60px
+			box-sizing border-box
+			padding-left 60px
+			padding-right 30px
+			width 50%
+			max-width 520px
+			position relative
+			&:after
+				top 13px
+				left 30px
+				width 8px
+				height 8px
+				border-radius 50%
+				background #0cb4ab
+				content ''
+				position absolute
+		strong
+			color #0cb4ab
+.partnership
+	background url(../img/back_1.jpg) center/cover no-repeat
+	color #fff
+	.wawe_bg_wrap
+		padding 220px 0
+	.slider_fourth
+		text-align center
+		 perspective: 1000px;
+		img
+			width 120px
+			margin 0 auto 30px
+		.slick-track
+			display: flex;
+			
+		.slick-list
+			overflow visible
+	.slide
+		height: auto;
+		position relative
+		overflow hidden
+		color #424745
+		margin 20px 10px
+		opacity .3
+		transition opacity 300ms
+		display: flex;
+		.slide_wrap
+			transform-style: preserve-3d;
+			transition transform 600ms
+		&.slick-active:hover .slide_wrap
+			transform rotateY(180deg)
+			
+		.decription
+			text-align left
+	.slick-active
+		opacity 1
+	
+	.top_part
+		border-radius 40px
+		padding 27px 40px 60px
+		box-sizing border-box
+		background #fff
+		position relative
+		transition transform 300ms
+		height 100%
+		backface-visibility: hidden;
+	.bottom_part
+		border-radius 40px
+		transition transform 300ms
+		transform rotateY(-180deg)
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		display flex
+		justify-content center
+		align-items center
+		background #0cb4ab
+		z-index 1
+		flex-direction column
+		color #fff
+		backface-visibility: hidden;
+		// display none
+		img
+			width 90px
+			filter: brightness(20);
+	.head
+		font-size 30px
+		margin-bottom 32px
+	form
+		input
+			font-size 18px
+			width 300px
+			max-width 80%
+			border-radius 100px
+			padding 30px
+			text-align center
+			border none
+			margin-bottom 30px
+			box-sizing border-box
+			background #fff
+			color #424745
+		button
+			background #424745
+			font-size 18px
+			width 212px
+			max-width 70%
+			border-radius 100px
+			padding 30px
+			text-align center
+			border none
+			margin-bottom 30px
+			box-sizing border-box
+			box-shadow: 9.762px 21.925px 24.96px 7.04px rgba(0, 0, 0, 0.17);
+			color #fff
+			cursor pointer
+.why_invest
+	color #424745
+	position relative
+	&:after
+		position absolute
+		bottom 0
+		right 0
+		left 0
+		height 400px
+		pointer-events none
+		background linear-gradient(to bottom,rgba(255,255,255,0), rgba(255,255,255,1))
+		content ''
+		
+	.slider_vertical
+		counter-reset count
+	.slick-list
+		padding-bottom: 240px
+		padding-left 250px
+		padding-top 30px
+	.head
+		font-size 29px
+		font-weight 800
+	.descr
+		font-size 23px
+		margin-bottom 5px
+	.slide
+		padding-bottom 90px
+		position relative
+		&.slick-active
+			&:before
+				width 130px
+				height 130px
+				line-height 127px
+				font-size 59px
+			&:after
+				top 130px
+				width 1px
+				height calc(100% - 130px)
+		&:before
+			counter-increment count
+			content counter(count)
+			position absolute
+			top 0
+			left -145px
+			transform translateX(-50%)
+			width 63px
+			height 63px
+			border-radius 50%
+			border 1px solid #18b8af
+			text-align center
+			line-height 60px
+			font-weight 300
+			font-size 36px
+			color #18b8af
+			transition all 300ms
+		&:after
+			transition all 300ms
+			content ''
+			position absolute
+			left -145px
+			transform translateX(-50%)
+			top 80px
+			width 1px
+			height calc(100% - 90px)
+			background linear-gradient(to bottom, alpha(#0db5ac,0), alpha(#0db5ac,1) 20%,alpha(#0db5ac,1) 80%,alpha(#0db5ac,0) )
+		&:last-child:after
+			display none
+		
+.future_plans
+	background linear-gradient(to bottom,#fafafa, #fff)
+	position relative
+	font-size 20px
+	.main_form
+		position absolute
+		top 30px
+		left 0
+		right 0
+		margin auto
+		input
+		button
+			box-shadow: 6.101px 13.703px 16.38px 4.62px rgba(0, 0, 0, 0.12);
+
+	.wawe_top_bg_wrap
+		padding-top 155px
+	strong
+		color #0cb4ab
+	#future_plans_graphic
+		margin 40px 0
+.team_section
+	.slick-list
+		padding 30px
+	.slide
+		text-align center
+		font-size 18px
+		box-sizing border-box
+		padding 42px 0 40px
+		border-radius: 45px;
+		transition box-shadow 300ms
+		
+	.slick-active
+		.photo_block
+			box-shadow: 9.762px 21.925px 24.96px 7.04px rgba(0, 0, 0, 0.17);
+		&:hover
+			box-shadow: 0 21.925px 20px rgba(0, 0, 0, 0.17);
+			.photo_block
+				box-shadow: 9.762px 21.925px 20px rgba(0, 0, 0, 0);
+	
+	.photo_block
+		position relative
+		overflow hidden
+		width 245px
+		height 245px
+		border-radius 50%
+		margin 0 auto 30px
+		transition box-shadow 300ms
+		img
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%,-50%)
+	.name
+		font-size 24px
+		font-weight 800
+		padding-bottom 28px
+		position relative
+		margin-bottom 30px
+		&:after
+			border-bottom 1px solid #0db5ac
+			content ''
+			position absolute
+			bottom 0
+			left 0
+			right 0
+			max-width 130px
+			margin auto
+.join_section
+	background url(../img/join_section_bg.jpg) center/cover
+	.bg_top_wave
+		padding-top 212px
+		padding-bottom 130px
+		
+	.text
+		width 100%
+		max-width 580px
+		line-height 1.5
+		font-size 21px
+		p
+			margin-bottom 20px
+	.inputs_wrp
+		position relative
+	.popup
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		background #fff
+		display flex
+		align-items center
+		flex-direction column
+		text-align center
+		justify-content center
+		border-radius 50px
+		font-weight 800px
+		font-size 18px
+		pointer-events none
+		opacity 0
+		transition opacity 300ms
+		box-shadow: 9.762px 21.925px 24.96px 7.04px rgba(0, 0, 0, 0.17);
+		.close
+			top 20px
+			right 20px
+			transform rotate(45deg)
+			font-size 30px
+			font-weight 300
+			position absolute
+			cursor pointer
+			user-select none
+		.img
+			max-width 130px
+			margin-bottom 40px
+	.form
+		max-width 510px
+		margin-left 60px
+		margin-right 60px
+		width calc(100% - 120px)
+		&.active
+			.submit_wrp .not_submit
+			.popup
+				opacity 1
+				pointer-events auto
+			.inputs
+				opacity 0
+				pointer-events none
+		.inputs
+			transition opacity 300ms
+		.input_wrp
+			position relative
+			img
+				position absolute
+				top 0
+				bottom 0
+				left 27px
+				max-width 23px
+				margin auto
+		input:not([type="checkbox"])
+			padding 30px 30px 30px 80px
+			border-radius 50px
+			width 100%
+			display block
+			box-sizing border-box
+			margin-bottom 35px
+			font-size 18px
+			border none
+			box-shadow: inset 0px 1px 0px 0px rgba(197, 197, 197, 0.6);
+	.input_checkbox
+		display flex
+		align-items flex-start
+		font-size 18px
+		margin-bottom 25px
+		input
+			position absolute
+			width 0
+			height 0
+			padding 0
+			margin 0
+			&:checked ~ .input:after
+				transform scale(1)
+		.input
+			margin-right 20px
+			display block
+			background #fff
+			box-shadow: inset 0px 1px 0px 0px rgba(197, 197, 197, 0.6);
+			width 26px
+			height 26px
+			border-radius 7px
+			position relative
+			cursor pointer
+			&:hover
+				&:after
+					transform scale(.45)
+				
+			&:after
+				transition transform 300ms
+				transform scale(0)
+				position absolute
+				width 50%
+				height 50%
+				left 0
+				right 0
+				bottom 0
+				top 0
+				margin auto
+				content ''
+				background #0db5ac
+				border-radius 3px
+	.submit_wrp
+		position relative
+		.button
+			text-align center
+			width 100%
+			display block
+			height 80px
+			line-height 80px
+			border-radius 100px
+			background #0db5ac
+			color #fff
+			border none
+			font-size 18px
+			cursor pointer
+			box-shadow: 9.762px 21.925px 24.96px 7.04px rgba(0, 0, 0, 0.17);
+		.not_submit
+			position absolute
+			top 0
+			left 0
+			right 0
+			bottom 0
+			opacity 0
+			pointer-events none
+			transition opacity 300ms
+			.button
+				box-shadow none
+
+
+footer
+	background #3f4241
+	color #fff
+	.item_main
+		&:not(:last-child)
+			margin-right 100px
+	.top_line
+		padding-top 66px
+		padding-bottom 65px
+	.logo
+		margin-bottom 30px
+		display block
+	.link
+		color #737373
+		font-size 14px
+		font-weight 300
+		position relative
+		padding-right 20px
+		transition color 300ms
+		&:hover
+			color #0cb4ab
+	.arrow_link
+		&:after
+			content '->'
+			position absolute
+			top 0
+			bottom 0
+			right 0
+			opacity 0
+			transform translateX(-100%)
+			transition transform 300ms, opacity 300ms
+		&:hover
+			&:after
+				transform translateX(0)
+				opacity 1
+	.item
+		span
+			white-space nowrap
+	.head
+		font-weight bold
+		margin-bottom 30px
+	.adreses
+		.item
+			display flex
+			// align-items flex-start
+			margin-bottom 30px
+		img
+			margin-right 20px
+			max-width 20px
+	.bott_line
+		background #393939
+		color #646464
+		padding 30px 0
+		.boxes
+			justify-content space-between
+		.madeby
+			.mob
+				display none
+
+@import "media.styl"
+	

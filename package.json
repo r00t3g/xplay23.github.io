@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.2.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "pug": "^2.0.3"
+  },
+  "dependencies": {
+    "axis": "^1.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-pug": "^4.0.1"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://nev_clickable@bitbucket.org/devlinkteam/all_small_projects.git"
+  },
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/devlinkteam/all_small_projects#readme",
+  "description": ""
+}
