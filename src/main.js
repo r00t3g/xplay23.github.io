@@ -1,21 +1,18 @@
 (function($){
-	$('.main_slider_wrap').slick({
-		dots: true,
-		fade: true,
-		arrows: false,
-	})
+	
 
 	$('.slider_fourth').slick({
 		arrows: false,
 		slidesToShow: 4,
-		slidesToScroll: 4,
-		infinite: false,
+		slidesToScroll: 1,
+		infinite: true,
+		autoplay: true,
+		 autoplaySpeed: 2000,
 		responsive: [
 		    {
 		      breakpoint: 1321,
 		      settings: {
 		        slidesToShow: 2,
-		        slidesToScroll: 2,
 		      }
 		    }
 		    ,
@@ -23,7 +20,6 @@
 		      breakpoint: 881,
 		      settings: {
 		        slidesToShow: 1,
-		        slidesToScroll: 1,
 		      }
 		    }
 		  ]
@@ -142,4 +138,14 @@
 		getGraphic($('#future_plans_graphic'));
 
 	}
+	$('.partnership .slider_fourth').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+	 $('.partnership .slider_fourth .slide').removeClass('visible_back')
+	});
+
+	$('.partnership .slider_fourth .slide').click(function(e){
+		e.preventDefault();
+		$('.partnership .slider_fourth .slide').removeClass('visible_back')
+		$(this).addClass('visible_back')
+		
+	})
 }(jQuery));
