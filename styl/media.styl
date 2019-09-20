@@ -15,7 +15,7 @@
 		.round_wrp
 			padding-top 80px
 	.top_section
-		padding-top 40px
+		padding-top 100px
 		.hand
 			max-width 530px
 			bottom 0
@@ -23,19 +23,26 @@
 			min-width 1920px
 			left 50%
 			transform translateX(-50%)
-	.logo_wrp
-		margin-bottom 80px
+	#side_dots
+		left 10px
 @media (max-width 1320px)
 	.content
 	.content_big
 		max-width 800px
+	.fixed_logo
+		top 0
+	.logo_wrp
+		max-width: 106px;
 	#main_menu_btn
 		display block
-		position absolute
+		position fixed
 		top 20px
 		right 20px
-		z-index 3
+		z-index 5
 		width 30px
+		transition filter 300ms
+		&.fixed
+			filter: contrast(0);
 		img
 			width 100%
 	#main_menu
@@ -45,10 +52,19 @@
 		right 0
 		bottom 0
 		background alpha(#0cb4ab,.9)
-		z-index 3
+		z-index 6
 		padding 30px
 		margin 0
 		display none
+		&.fixed
+			.links_block
+				.link
+					color #fff
+			.socials
+				filter: none
+			.languages .link
+				background #fff
+				color #0d766f
 		.close_menu
 			display block
 			position absolute
@@ -172,6 +188,8 @@
 	footer
 		.link
 			padding 0
+			&:after
+				display none
 		.adreses img
 			margin-right: 10px;
 			max-width: 14px;
@@ -189,8 +207,20 @@
 			display inline-block
 		*
 			margin 0 10px
-		
-		
+			
+@media (max-width 1200px)
+	.btn
+		height: 60px;
+		font-size 16px
+		min-width: 210px;
+	#coocies
+		font-size: 12px;
+		img
+			max-width: 60px;
+	#side_dots
+		display none
+	.future_plans #future_plans_graphic
+		margin 30px 0 40px
 		
 @media (max-width 880px)
 	.content
@@ -198,7 +228,7 @@
 		max-width: 600px;
 		
 	.top_section
-		padding-top 20px
+		padding-top 70px
 	.main_slider
 		.main_slider_wrap
 			max-width 360px
@@ -212,7 +242,6 @@
 			margin-bottom 45px
 	.logo_wrp
 		max-width: 110px;
-		margin-bottom: 20px;
 	.top_section
 		
 		.hand
@@ -285,11 +314,37 @@
 		width 100%
 		margin 5px 0
 		padding 0
+	#coocies
+		line-height: 1.1;
+		.boxes
+			padding 0 30px 0 10px
+		img
+			max-width: 50px;
+		.view_more
+			display block
+		.viewmore_content
+			display none
+		.accept
+			margin-left: 13px;
+			font-size 13px
+			height: 42px;
+			min-width: 130px;
+		.close
+			top: 0px;
+			right: 6px;
 @media (max-width 650px)
+
 	.content
 	.content_big
 		max-width: 300px;
-	
+	.logo_wrp
+		max-width: 80px;
+	#main_menu_btn
+		top: 11px;
+		right: 13px;
+		width: 25px;
+	.fixed_logo
+		padding 4px 0
 	.main_slider
 		.main_slider_wrap
 			max-width: 100%
@@ -394,3 +449,29 @@
 			display none
 	.join_section .bg_top_wave
 		padding-top 20px
+	
+	#coocies
+		padding: 9px 0 10px;
+		text-align center
+		img
+			display block
+			
+		p
+			text-align left
+			margin-bottom 10px
+		.boxes
+			display block
+		.accept
+			display inline-block
+			margin 0 5px
+			height: 33px;
+			min-width: 110px;
+			padding: 0;
+	.join_section .submit_wrp .button
+		height 60px
+		line-height 60px
+@media (max-width 650px) and (max-height 540px)
+	#main_menu .links_block .link:not(:last-child)
+		margin-bottom 10px
+	#main_menu .mobile
+		width 112px
