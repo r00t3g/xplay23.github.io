@@ -72,6 +72,8 @@ strong
 	height 80px
 	border-radius 100px
 	transition background 300ms
+	&:hover
+		background-color #00e0d4
 .boxes
 	display flex
 	align-items flex-start
@@ -215,30 +217,35 @@ strong
 		top 0
 		background #fff
 #main_menu
-	position fixed
-	top 60px
-	right 50%
-	margin-right -824px
-	max-width 50%
 	color #fff
 	font-size 18px
-	z-index 4
-	transition top 300ms
-	padding 30px 0
+	// padding 30px 0
+	position absolute
+	top 0
+	right 50%
+	margin-right -824px
+	
 	&.fixed
-		top 0
 		.links_block
+			top 0
 			.link
 				color #808080
-		.socials
-			filter: contrast(0);
-		.languages .link
-			background #808080
-			color #fff
+				&:hover
+					color #0c9b93
 	.close_menu
 	.mobile
 		display none
 	.links_block
+		z-index 4
+		position fixed
+		top 60px
+		right 50%
+		margin-right -824px
+		max-width 50%
+		width: 100%;
+		transition top 300ms
+		padding 30px 0
+		text-align: right;
 		.link
 			position relative
 			text-align center
@@ -259,7 +266,7 @@ strong
 			&:not(:last-child)
 				margin-right 72px
 	.round_wrp
-		padding-top 121px
+		padding-top 230px
 		.link
 			margin-left auto
 			display block
@@ -378,7 +385,8 @@ strong
 		padding 171px 0 220px
 	.slider_fourth
 		text-align center
-		 perspective: 1000px;
+		.img_wrp
+			min-height 140px
 		img
 			width 120px
 			margin 0 auto 30px
@@ -388,20 +396,22 @@ strong
 		.slick-list
 			overflow visible
 	.slide
+		perspective: 10000;
 		height: auto;
 		position relative
 		overflow hidden
 		color #424745
 		margin 20px 10px
-		opacity .3
+		opacity .1
 		transition opacity 300ms 500ms
 		display: flex;
 		cursor pointer
 		.slide_wrap
 			transform-style: preserve-3d;
 			transition transform 600ms
-		&.slick-active.visible_back .slide_wrap
 			transform rotateY(180deg)
+		&.slick-active.visible_back .slide_wrap
+			transform rotateY(0)
 			
 		.decription
 			text-align left
@@ -417,10 +427,10 @@ strong
 		transition transform 300ms
 		height 100%
 		backface-visibility: hidden;
+		transform rotateY(-180deg)
 	.bottom_part
 		border-radius 40px
 		transition transform 300ms
-		transform rotateY(-180deg)
 		position absolute
 		top 0
 		left 0
@@ -468,6 +478,9 @@ strong
 			box-shadow: 9.762px 21.925px 24.96px 7.04px rgba(0, 0, 0, 0.17);
 			color #fff
 			cursor pointer
+			transition background 300ms
+			&:hover
+				background-color #585d5b
 .why_invest
 	color #424745
 	position relative
@@ -535,7 +548,29 @@ strong
 			background linear-gradient(to bottom, alpha(#0db5ac,0), alpha(#0db5ac,1) 20%,alpha(#0db5ac,1) 80%,alpha(#0db5ac,0) )
 		&:last-child:after
 			display none
-		
+	.slick-dots	
+		text-align center
+		padding-bottom 30px
+		li
+			display inline-block
+			margin 0 7px
+			&.slick-active
+				button
+					transform scale(1)
+			button
+				transform scale(.85)
+				transition transform 300ms
+				font-size 15px
+				width 30px
+				height 30px
+				line-height 30px
+				padding 0
+				margin 0
+				text-align center
+				border-radius 50%
+				color #0cb4ab
+				border 1px solid #0cb4ab
+				background-color transparent
 .future_plans
 	background linear-gradient(to bottom,#fafafa, #fff)
 	position relative
@@ -559,13 +594,17 @@ strong
 .team_section
 	.slick-list
 		padding 30px
+		overflow visible
 	.slide
 		text-align center
 		font-size 18px
 		box-sizing border-box
 		padding 42px 0 40px
 		border-radius: 45px;
-		transition box-shadow 300ms
+		transition box-shadow 300ms, opacity 300ms 500ms
+		opacity .1
+	.slick-active
+		opacity 1
 		
 	.slick-active
 		.photo_block
@@ -694,10 +733,14 @@ strong
 			height 0
 			padding 0
 			margin 0
+			width 0
+			height 0
+			
 			&:checked ~ .input:after
 				transform scale(1)
-		.input
+		.label
 			margin-right 20px
+		.input
 			display block
 			background #fff
 			box-shadow: inset 0px 1px 0px 0px rgba(197, 197, 197, 0.6);
@@ -770,7 +813,7 @@ footer
 		margin-bottom 30px
 		display block
 	.link
-		color #737373
+		color #bbbbbb
 		font-size 14px
 		font-weight 300
 		position relative
@@ -801,11 +844,12 @@ footer
 	.adreses
 		.item
 			display flex
-			// align-items flex-start
+			align-items flex-start
 			margin-bottom 30px
 		img
 			margin-right 20px
 			max-width 20px
+			margin-top: 4px;
 	.bott_line
 		background #393939
 		color #646464
@@ -878,7 +922,8 @@ footer
 	img
 		max-width 90px
 		margin-right 20px
-	
+	.text_wrap
+		padding 0
 	.accept
 		margin-left 20px
 		flex-shrink 0

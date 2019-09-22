@@ -5,8 +5,10 @@
 		top 40px
 		max-width none
 		margin-right: -620px;
-		.links_block .link:not(:last-child)
-			margin-right 35px
+		.links_block
+			margin-right: -620px;
+			.link:not(:last-child)
+				margin-right 35px
 	.main_slider 
 		box-sizing border-box
 		padding-left 30px
@@ -15,7 +17,7 @@
 		.round_wrp
 			padding-top 80px
 	.top_section
-		padding-top 100px
+		padding-top 160px
 		.hand
 			max-width 530px
 			bottom 0
@@ -81,6 +83,11 @@
 			display flex
 			flex-direction column
 			align-items: flex-start;
+			position relative
+			left 0
+			margin-left 0
+			padding 0
+			top 0
 			.link
 				text-align left
 				font-size 24px
@@ -130,51 +137,17 @@
 	.why_invest
 		.slick-list
 			padding-left 0
-			padding-bottom 50px
+			padding-bottom 20px
 		.slick-track
 			display flex
 		&:after
 			display none
 		.slide
 			height auto
-			&:before
-				width 20px
-				height 20px
-				line-height 20px
-				font-size 13px
+			padding-bottom 10px
 			&:after
 			&:before
-				left 0
-				bottom 0
-				top auto
-				transform none
-			&:after
-				top auto
-				left 40px
-				right 20px
-				height 1px
-				width auto
-				bottom: 15px;
-			&:last-child
-				&:after
-					display block
-			&.slick-active
-				&:after
-					top auto
-					left: 29px;
-					right: 0;
-					height: 1px;
-					bottom: 15px;
-					width auto
-					background: linear-gradient(90deg,rgba(13,181,172,0),#0db5ac 20%,#0db5ac)
-				&:before
-					width 30px
-					height 30px
-					line-height 30px
-					font-size 16px
-					left 0
-					bottom 0
-					top auto
+				display none
 				
 			
 	.about .boxes
@@ -289,8 +262,11 @@
 		.head
 			font-size: 24px;
 			margin-bottom: 22px;
-		.slider_fourth img
-			width 90px
+		.slider_fourth
+			.img_wrp
+				min-height 100px
+			img
+				width 90px
 	// .why_invest .slide.slick-active:before
 	// 	width: 80px;
 	// 	height: 80px;
@@ -298,8 +274,8 @@
 	// 	font-size: 39px;
 	// .why_invest .slide:after, .why_invest .slide:before
 	// 	left: -70px;
-	.why_invest .slick-list
-		padding-bottom: 130px;
+	// .why_invest .slick-list
+	// 	padding-bottom: 130px;
 	.join_section .bg_top_wave
 		padding-top 100px
 	.join_section .text
@@ -318,10 +294,9 @@
 		line-height: 1.1;
 		.boxes
 			padding 0 30px 0 10px
+			max-width: 580px;
 		img
 			max-width: 50px;
-		.view_more
-			display block
 		.viewmore_content
 			display none
 		.accept
@@ -332,6 +307,18 @@
 		.close
 			top: 0px;
 			right: 6px;
+		.text_wrap
+			display block
+		button
+		.view_more
+			display inline-block
+		.view_more
+			background-color transparent
+			border none
+			color #fff
+			text-decoration underline
+		p
+			margin-bottom 10px
 @media (max-width 650px)
 
 	.content

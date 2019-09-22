@@ -47,6 +47,7 @@
 		      settings: {
 		        vertical: false,
 		        verticalSwiping: false,
+		        dots: true
 		      }
 		    }
 		    
@@ -82,7 +83,7 @@
 
 	 $(document).on('mousemove',function(e){
 	 	$('.paralax_el').each(function(ind,el){
-	 		$(el).css('transform','translateX('+ (e.originalEvent.clientX/el.dataset.axelerate)+'px) translateZ(0)');
+	 		$(el).css('transform','translateX('+ ((e.originalEvent.clientX - window.innerWidth/2)/el.dataset.axelerate)+'px) translateZ(0)');
 	 	})
     })
 	 //////////////REMOVEEE
