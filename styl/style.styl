@@ -396,7 +396,7 @@ strong
 		.slick-list
 			overflow visible
 	.slide
-		perspective: 10000;
+		// perspective: 10000px;
 		height: auto;
 		position relative
 		overflow hidden
@@ -407,11 +407,14 @@ strong
 		display: flex;
 		cursor pointer
 		.slide_wrap
-			transform-style: preserve-3d;
-			transition transform 600ms
-			transform rotateY(180deg)
+			// transform-style: preserve-3d;
+			// transition transform 600ms
+			// transform rotateY(180deg)
 		&.slick-active.visible_back .slide_wrap
-			transform rotateY(0)
+			.top_part
+				transform rotateY(-180deg) translateZ(-1px)
+			.bottom_part
+				transform rotateY(0)
 			
 		.decription
 			text-align left
@@ -424,13 +427,15 @@ strong
 		box-sizing border-box
 		background #fff
 		position relative
-		transition transform 300ms
+		transition transform 600ms
 		height 100%
 		backface-visibility: hidden;
-		transform rotateY(-180deg)
+		transform rotateY(1deg)
 	.bottom_part
+		backface-visibility: hidden;
 		border-radius 40px
-		transition transform 300ms
+		transform rotateY(-180deg)
+		transition transform 600ms
 		position absolute
 		top 0
 		left 0
@@ -443,7 +448,6 @@ strong
 		z-index 1
 		flex-direction column
 		color #fff
-		backface-visibility: hidden;
 		// display none
 		img
 			width 90px
